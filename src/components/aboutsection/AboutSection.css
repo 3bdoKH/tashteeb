@@ -1,0 +1,172 @@
+.about-section {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+    direction: rtl;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    color: #e67e22;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -30px;
+    right: 30px;
+    background-color: #e67e22;
+    color: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(230, 126, 34, 0.3);
+}
+
+.experience-badge .years {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.experience-badge .text {
+    font-size: 1rem;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #666;
+    font-size: 1.05rem;
+}
+
+.about-features {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.feature {
+    flex: 1 0 50%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.feature i {
+    color: #e67e22;
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.feature span {
+    font-weight: 600;
+    color: #333;
+}
+
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 40px 20px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .experience-badge {
+        width: 100px;
+        height: 100px;
+        bottom: -20px;
+        right: 20px;
+    }
+    
+    .experience-badge .years {
+        font-size: 2rem;
+    }
+    
+    .feature {
+        flex: 1 0 100%;
+    }
+    
+    .stats-container {
+        flex-wrap: wrap;
+    }
+    
+    .stat-item {
+        flex: 1 0 50%;
+    }
+}
