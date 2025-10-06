@@ -110,15 +110,6 @@ const ContactSection = () => {
                             <a href="https://www.facebook.com/share/172axqTggG/" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                                <i className="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                                <i className="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                                <i className="fab fa-linkedin-in"></i>
-                            </a>
                             <a href="https://wa.me/+201286282884" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-whatsapp"></i>
                             </a>

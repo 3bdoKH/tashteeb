@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
-import { image1 } from '../../utils/imports';
+import logo from '../../loog.png';
 const Footer = () => {
     return (
         <footer className="footer">
@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className="footer-top">
                     <div className="footer-logo">
                         <Link to="/">
-                            <img src={image1} alt="تشطيب" />
+                            <img src={logo} alt="تشطيب" />
                             <span>تشطيب بالتقسيط</span>
                         </Link>
                         <p>خدمات تشطيب شقق فاخرة من الألف إلى الياء</p>
@@ -32,7 +32,6 @@ const Footer = () => {
                             <h3>خدماتنا</h3>
                             <ul>
                                 <li><Link to="/services">تشطيب كامل</Link></li>
-                                <li><Link to="/services">تشطيب نص تشطيب</Link></li>
                                 <li><Link to="/services">تصميم داخلي</Link></li>
                                 <li><Link to="/services">ترميم وتجديد</Link></li>
                                 <li><Link to="/services">أعمال الكهرباء</Link></li>
@@ -70,18 +69,10 @@ const Footer = () => {
                     </div>
 
                     <div className="social-links">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/share/172axqTggG/" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-linkedin-in"></i>
-                        </a>
+
                         <a href="https://wa.me/+201286282884" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-whatsapp"></i>
                         </a>

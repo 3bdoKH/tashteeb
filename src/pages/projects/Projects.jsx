@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Projects.css';
 import { image10, image11, image12, image13, image14, image16, image17, image18, image19, image20, image21, image22, image23, image24, image25, image26, image27, image28, image29, image30, image31, image32, image33, image34, image35, image36, image37, video1, video2, video3, video4, video5, video6, video7, video8, video9 } from '../../utils/imports';
 const Projects = () => {
@@ -306,7 +307,6 @@ const Projects = () => {
                                 <div
                                     className={`project-card ${project.featured ? 'featured' : ''}`}
                                     key={project.id}
-                                    onClick={() => openProjectModal(project)}
                                 >
                                     <div className="project-image">
                                         <img src={project.images[0]} alt={project.title} />
@@ -314,7 +314,14 @@ const Projects = () => {
                                             <div className="project-details">
                                                 <h3>{project.title}</h3>
                                                 <p><i className="fas fa-map-marker-alt"></i> {project.location}</p>
-                                                <span className="view-project">عرض المشروع</span>
+                                                <div className="project-actions">
+                                                    <span className="view-project-modal" onClick={() => openProjectModal(project)}>
+                                                        <i className="fas fa-search-plus"></i> معاينة سريعة
+                                                    </span>
+                                                    <Link to={`/projects/${project.id}`} className="view-project-details">
+                                                        <i className="fas fa-external-link-alt"></i> تفاصيل المشروع
+                                                    </Link>
+                                                </div>
                                             </div>
                                         </div>
                                         {project.featured && <div className="featured-badge">مميز</div>}

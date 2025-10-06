@@ -87,21 +87,12 @@ const Contact = () => {
         {
             id: 1,
             city: 'القاهرة',
-            address: '0000000',
+            address: '١٤٧ شارع النزهه الدور التاسع',
             phone: '01286282884',
             email: 'info@tashteeb.com',
             hours: 'السبت - الخميس: 9 صباحًا - 6 مساءً',
             mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.6763430733726!2d46.67221251499919!3d24.700772184127007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sKing%20Fahd%20Rd%2C%20Riyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1635159444010!5m2!1sen!2sus'
         },
-        {
-            id: 2,
-            city: 'الاسكندرية',
-            address: '0000000',
-            phone: '01126351365',
-            email: 'info@tashteeb.com',
-            hours: 'السبت - الخميس: 9 صباحًا - 6 مساءً',
-            mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.7897905372474!2d39.13305761493258!3d21.543533185727398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d01fb1137e59%3A0xe9d86def65d3dfc0!2sAl%20Tahliah%20St%2C%20Jeddah%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1635159500917!5m2!1sen!2sus'
-        }
     ];
 
     // Active office for map display
@@ -142,8 +133,7 @@ const Contact = () => {
                                 <i className="fas fa-map-marker-alt"></i>
                             </div>
                             <h3>العنوان</h3>
-                            <p>0000000</p>
-                            <p>0000000</p>
+                            <p>١٤٧ شارع النزهه الدور التاسع</p>
                         </div>
 
                         <div className="contact-card">
@@ -157,18 +147,10 @@ const Contact = () => {
                     </div>
 
                     <div className="social-links">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/share/172axqTggG/" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-linkedin-in"></i>
-                        </a>
+
                         <a href="https://wa.me/+201286282884" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-whatsapp"></i>
                         </a>
