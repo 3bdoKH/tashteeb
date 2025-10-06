@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Hero.css';
 import { image1 } from '../../utils/imports';
-import { video1 } from '../../utils/imports';
+import back from '../../materials/vids/back.mp4';
 const Hero = () => {
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
     useEffect(() => {
@@ -25,7 +25,7 @@ const Hero = () => {
                     className={`hero-video ${isVideoLoaded ? 'loaded' : ''}`}
                     onCanPlay={() => setIsVideoLoaded(true)}
                 >
-                    <source src={video1} type="video/mp4" />
+                    <source src={back} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
 
