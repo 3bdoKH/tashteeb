@@ -19,7 +19,7 @@
 }
 
 .section-header h2 {
-  color: #e67e22;
+  color: var(--text);
   font-size: 1.8rem;
   margin-bottom: 10px;
 }
@@ -44,14 +44,14 @@
 }
 
 .btn-primary {
-  background-color: #e67e22;
+  background-color: var(--accent);
   color: white;
-  border: 2px solid #e67e22;
+  border: 2px solid var(--border);
 }
 
 .btn-primary:hover {
-  background-color: #d35400;
-  border-color: #d35400;
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -74,11 +74,11 @@
   .section-header h2 {
     font-size: 1.5rem;
   }
-  
+
   .section-header p {
     font-size: 2rem;
   }
-  
+
   .btn {
     padding: 10px 20px;
     font-size: 1rem;

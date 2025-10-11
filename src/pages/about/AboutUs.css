@@ -48,7 +48,7 @@
   right: 0;
   width: 60px;
   height: 3px;
-  background-color: #e67e22;
+  background-color: var(--accent);
 }
 
 .about-content p {
@@ -77,7 +77,7 @@
 }
 
 .value-item h3 {
-  color: #e67e22;
+  color: var(--accent);
   margin-bottom: 15px;
 }
 
@@ -118,7 +118,7 @@
 .step-number {
   width: 60px;
   height: 60px;
-  background-color: #e67e22;
+  background-color: var(--accent);
   color: white;
   border-radius: 50%;
   display: flex;

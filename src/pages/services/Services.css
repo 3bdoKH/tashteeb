@@ -53,7 +53,7 @@
 .service-icon {
     width: 60px;
     height: 60px;
-    background-color: #e67e22;
+    background-color: var(--accent);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -142,7 +142,7 @@
 }
 
 .service-features li i {
-    color: #e67e22;
+    color: var(--accent);
     margin-left: 10px;
     font-size: 1.1rem;
     margin-top: 3px;
@@ -199,7 +199,7 @@
     right: 20px;
     width: 60px;
     height: 60px;
-    background-color: #e67e22;
+    background-color: var(--accent);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -242,7 +242,7 @@
 
 .sub-service-card:hover .feature-tag {
     background-color: #fef0e6;
-    color: #e67e22;
+    color: var(--accent-hover);
 }
 
 .service-cta-section {
@@ -250,7 +250,7 @@
 }
 
 .service-cta {
-    background-color: #e67e22;
+    background-color: var(--accent);
     padding: 60px;
     border-radius: 10px;
     text-align: center;
@@ -273,7 +273,7 @@
 
 .service-cta .btn {
     background-color: white;
-    color: #e67e22;
+    color: var(--accent);
     border: 2px solid white;
 }
 

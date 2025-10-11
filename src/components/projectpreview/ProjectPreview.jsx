@@ -106,9 +106,7 @@ const ProjectPreview = () => {
                     ))}
                 </div>
 
-                <div className="projects-cta">
-                    <Link to="/projects" className="btn btn-primary">عرض جميع المشاريع</Link>
-                </div>
+                <Link to="/projects" className="btn btn-primary">عرض جميع المشاريع</Link>
             </div>
         </section>
     );

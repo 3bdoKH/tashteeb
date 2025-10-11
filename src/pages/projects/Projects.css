@@ -62,11 +62,11 @@
 }
 
 .filter-group li:hover {
-    color: #e67e22;
+    color: var(--accent-hover);
 }
 
 .filter-group li.active {
-    background-color: #e67e22;
+    background-color: var(--accent);
     color: white;
 }
 
@@ -155,7 +155,7 @@
 
 .project-details p i {
     margin-left: 8px;
-    color: #e67e22;
+    color: var(--accent);
 }
 
 .project-actions {
@@ -188,12 +188,12 @@
 }
 
 .view-project-details {
-    background-color: #e67e22;
+    background-color: var(--accent);
     color: white;
 }
 
 .view-project-details:hover {
-    background-color: #d35400;
+    background-color: var(--accent-hover);
 }
 
 .project-actions i {
@@ -204,7 +204,7 @@
     position: absolute;
     top: 20px;
     left: -35px;
-    background-color: #e67e22;
+    background-color: var(--accent);
     color: white;
     padding: 8px 40px;
     font-size: 0.9rem;
@@ -261,6 +261,7 @@
     overflow-y: auto;
     position: relative;
     direction: rtl;
+    padding: 10px;
 }
 
 .close-modal {
@@ -269,7 +270,7 @@
     left: 15px;
     width: 40px;
     height: 40px;
-    background-color: #e67e22;
+    background-color: var(--accent);
     color: white;
     border: none;
     border-radius: 50%;
@@ -300,7 +301,7 @@
 
 .modal-header p i {
     margin-left: 8px;
-    color: #e67e22;
+    color: var(--accent);
 }
 
 .modal-gallery {
@@ -339,7 +340,7 @@
 
 .nav-btn:hover {
     background-color: white;
-    color: #e67e22;
+    color: var(--accent-hover);
 }
 
 .nav-btn.prev {
@@ -375,7 +376,7 @@
 
 .thumbnail.active {
     opacity: 1;
-    box-shadow: 0 0 0 3px #e67e22;
+    box-shadow: 0 0 0 3px var(--accent);
 }
 
 .thumbnail img {
@@ -455,7 +456,7 @@
 }
 
 .projects-cta {
-    background-color: #e67e22;
+    background-color: var(--accent);
     padding: 60px;
     border-radius: 10px;
     text-align: center;
@@ -478,7 +479,7 @@
 
 .projects-cta .btn {
     background-color: white;
-    color: #e67e22;
+    color: var(--accent);
     border: 2px solid white;
     display: inline-block;
     padding: 12px 30px;

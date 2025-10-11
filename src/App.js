@@ -4,6 +4,7 @@ import "./App.css";
 // Import components
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
+import ThemeNavigator from "./components/themenavigator/ThemeNavigator";
 
 // Import pages
 import Home from "./pages/Home";
@@ -31,6 +32,7 @@ function App() {
           <Route path="/offers" element={<OffersPage />} />
         </Routes>
         <Footer />
+        <ThemeNavigator />
       </div>
     </Router>
   );

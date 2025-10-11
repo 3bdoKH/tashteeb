@@ -84,7 +84,7 @@
 .service-link {
     display: inline-flex;
     align-items: center;
-    color: #e67e22;
+    color: var(--accent);
     font-weight: 600;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -96,7 +96,7 @@
 }
 
 .service-link:hover {
-    color: #d35400;
+    color: var(--accent-hover);
 }
 
 .service-link:hover i {
@@ -127,7 +127,7 @@
     .services-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .services-cta {
         padding: 30px;
     }

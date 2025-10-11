@@ -16,7 +16,7 @@
 }
 
 .section-header h2 {
-    color: #e67e22;
+    color: var(--text);
     font-size: 1.8rem;
     margin-bottom: 10px;
 }
@@ -51,7 +51,7 @@
     position: absolute;
     bottom: -30px;
     right: 30px;
-    background-color: #e67e22;
+    background-color: var(--accent);
     color: white;
     width: 120px;
     height: 120px;
@@ -105,7 +105,7 @@
 }
 
 .feature i {
-    color: #e67e22;
+    color: var(--accent);
     margin-left: 10px;
     font-size: 1.2rem;
 }
@@ -133,7 +133,7 @@
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #e67e22;
+    color: var(--text);
     margin-bottom: 10px;
 }
 
@@ -146,26 +146,26 @@
     .about-content {
         flex-direction: column;
     }
-    
+
     .experience-badge {
         width: 100px;
         height: 100px;
         bottom: -20px;
         right: 20px;
     }
-    
+
     .experience-badge .years {
         font-size: 2rem;
     }
-    
+
     .feature {
         flex: 1 0 100%;
     }
-    
+
     .stats-container {
         flex-wrap: wrap;
     }
-    
+
     .stat-item {
         flex: 1 0 50%;
     }
