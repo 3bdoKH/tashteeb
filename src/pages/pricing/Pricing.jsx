@@ -94,89 +94,55 @@ const Pricing = () => {
     ];
 
 
-    // Calculator state
-    const [calculatorData, setCalculatorData] = useState({
-        area: 100,
-        plan: 'متوسط',
-        rooms: 2,
-        bathrooms: 1,
-        kitchen: true,
-        balcony: false
+    // Form state
+    const [formData, setFormData] = useState({
+        area: '',
+        plan: 'اقتصادي',
+        rooms: '',
+        bathrooms: '',
+        kitchens: '',
+        balconies: ''
     });
 
-    // Calculation result
-    const [calculationResult, setCalculationResult] = useState({
-        basePrice: 0,
-        additionalCosts: 0,
-        totalPrice: 0
-    });
-
-    // Handle calculator input changes
+    // Handle form input changes
     const handleInputChange = (e) => {
-        const { name, value, type, checked } = e.target;
-        setCalculatorData({
-            ...calculatorData,
-            [name]: type === 'checkbox' ? checked : value
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
         });
     };
 
-    // Calculate price based on inputs
-    useEffect(() => {
-        const calculatePrice = () => {
-            // Get base price per square meter based on selected plan
-            let pricePerMeter = 0;
-            switch (calculatorData.plan) {
-                case 'اقتصادي':
-                    pricePerMeter = 1999;
-                    break;
-                case 'متوسط':
-                    pricePerMeter = 2750;
-                    break;
-                case 'فاخر':
-                    pricePerMeter = 3400;
-                    break;
-                default:
-                    pricePerMeter = 1999;
-            }
+    // Handle form submission to WhatsApp
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-            // Calculate base price
-            const basePrice = pricePerMeter * calculatorData.area;
+        // Validate form
+        if (!formData.area || !formData.rooms || !formData.bathrooms || !formData.kitchens || !formData.balconies) {
+            alert('الرجاء ملء جميع الحقول المطلوبة');
+            return;
+        }
 
-            // Calculate additional costs
-            let additionalCosts = 0;
+        // Create WhatsApp message
+        const message = `
+🏠 *طلب عرض سعر تشطيب*
 
-            // Additional cost for rooms (wiring, flooring, etc.)
-            additionalCosts += parseInt(calculatorData.rooms) * 5000;
+📏 *المساحة:* ${formData.area} متر مربع
+🎨 *نوع التشطيب:* ${formData.plan}
+🚪 *عدد الغرف:* ${formData.rooms}
+🚿 *عدد الحمامات:* ${formData.bathrooms}
+🍳 *عدد المطابخ:* ${formData.kitchens}
+🏡 *عدد البلكونات:* ${formData.balconies}
 
-            // Additional cost for bathrooms (plumbing, tiles, fixtures)
-            additionalCosts += parseInt(calculatorData.bathrooms) * 15000;
+أرجو تزويدي بعرض سعر تفصيلي.
+        `.trim();
 
-            // Additional cost for kitchen
-            if (calculatorData.kitchen) {
-                additionalCosts += 25000;
-            }
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappURL = `https://wa.me/+201286282884?text=${encodedMessage}`;
 
-            // Additional cost for balcony
-            if (calculatorData.balcony) {
-                additionalCosts += 8000;
-            }
-
-            // Calculate total price
-            const totalPrice = basePrice + additionalCosts;
-
-            setCalculationResult({
-                basePrice,
-                additionalCosts,
-                totalPrice
-            });
-        };
-
-        calculatePrice();
-    }, [calculatorData]);
-
-    // Format number with commas
-    const formatNumber = (number) => {
-        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        // Open WhatsApp
+        window.open(whatsappURL, '_blank');
     };
 
     return (
@@ -255,104 +221,150 @@ const Pricing = () => {
             <section className="calculator-section">
                 <div className="container">
                     <div className="section-header">
-                        <h2>حاسبة التكلفة</h2>
-                        <p>احسب تكلفة تشطيب شقتك</p>
+                        <h2>احصل على عرض سعر مخصص</h2>
+                        <p>املأ البيانات وسنرسل لك عرض سعر تفصيلي عبر الواتساب</p>
                     </div>
 
-                    <div className="calculator-container">
-                        <div className="calculator-form">
-                            <div className="form-group">
-                                <label htmlFor="area">المساحة (متر مربع)</label>
-                                <input
-                                    type="number"
-                                    id="area"
-                                    name="area"
-                                    min="50"
-                                    max="1000"
-                                    value={calculatorData.area}
-                                    onChange={handleInputChange}
-                                />
+                    <div className="quote-form-container">
+                        <form className="quote-form" onSubmit={handleSubmit}>
+                            <div className="form-grid">
+                                <div className="form-group">
+                                    <label htmlFor="area">
+                                        <i className="fas fa-ruler-combined"></i>
+                                        المساحة (متر مربع) *
+                                    </label>
+                                    <input
+                                        type="number"
+                                        id="area"
+                                        name="area"
+                                        min="1"
+                                        placeholder="أدخل المساحة"
+                                        value={formData.area}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                </div>
+
+                                <div className="form-group">
+                                    <label htmlFor="plan">
+                                        <i className="fas fa-paint-roller"></i>
+                                        نوع التشطيب *
+                                    </label>
+                                    <select
+                                        id="plan"
+                                        name="plan"
+                                        value={formData.plan}
+                                        onChange={handleInputChange}
+                                        required
+                                    >
+                                        <option value="اقتصادي">اقتصادي</option>
+                                        <option value="لوكس">لوكس</option>
+                                        <option value="هاي لوكس">هاي لوكس</option>
+                                    </select>
+                                </div>
+
+                                <div className="form-group">
+                                    <label htmlFor="rooms">
+                                        <i className="fas fa-door-closed"></i>
+                                        عدد الغرف *
+                                    </label>
+                                    <input
+                                        type="number"
+                                        id="rooms"
+                                        name="rooms"
+                                        min="0"
+                                        placeholder="عدد الغرف"
+                                        value={formData.rooms}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                </div>
+
+                                <div className="form-group">
+                                    <label htmlFor="bathrooms">
+                                        <i className="fas fa-bath"></i>
+                                        عدد الحمامات *
+                                    </label>
+                                    <input
+                                        type="number"
+                                        id="bathrooms"
+                                        name="bathrooms"
+                                        min="0"
+                                        placeholder="عدد الحمامات"
+                                        value={formData.bathrooms}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                </div>
+
+                                <div className="form-group">
+                                    <label htmlFor="kitchens">
+                                        <i className="fas fa-utensils"></i>
+                                        عدد المطابخ *
+                                    </label>
+                                    <input
+                                        type="number"
+                                        id="kitchens"
+                                        name="kitchens"
+                                        min="0"
+                                        placeholder="عدد المطابخ"
+                                        value={formData.kitchens}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                </div>
+
+                                <div className="form-group">
+                                    <label htmlFor="balconies">
+                                        <i className="fas fa-border-style"></i>
+                                        عدد البلكونات *
+                                    </label>
+                                    <input
+                                        type="number"
+                                        id="balconies"
+                                        name="balconies"
+                                        min="0"
+                                        placeholder="عدد البلكونات"
+                                        value={formData.balconies}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                </div>
                             </div>
 
-                            <div className="form-group">
-                                <label htmlFor="plan">نوع التشطيب</label>
-                                <select
-                                    id="plan"
-                                    name="plan"
-                                    value={calculatorData.plan}
-                                    onChange={handleInputChange}
-                                >
-                                    <option value="اقتصادي">اقتصادي (1999 جنيه / متر)</option>
-                                    <option value="متوسط">لوكس (2750 جنيه / متر)</option>
-                                    <option value="فاخر">فاخر (3400 جنيه / متر)</option>
-                                </select>
+                            <div className="form-submit">
+                                <button type="submit" className="btn btn-whatsapp">
+                                    <i className="fab fa-whatsapp"></i>
+                                    إرسال عبر الواتساب
+                                </button>
+                                <p className="form-note">* سيتم فتح الواتساب مباشرة مع رسالة تحتوي على بياناتك</p>
                             </div>
+                        </form>
 
-                            <div className="form-group">
-                                <label htmlFor="rooms">عدد الغرف</label>
-                                <input
-                                    type="number"
-                                    id="rooms"
-                                    name="rooms"
-                                    min="1"
-                                    max="10"
-                                    value={calculatorData.rooms}
-                                    onChange={handleInputChange}
-                                />
-                            </div>
-
-                            <div className="form-group">
-                                <label htmlFor="bathrooms">عدد الحمامات</label>
-                                <input
-                                    type="number"
-                                    id="bathrooms"
-                                    name="bathrooms"
-                                    min="1"
-                                    max="5"
-                                    value={calculatorData.bathrooms}
-                                    onChange={handleInputChange}
-                                />
-                            </div>
-
-                            <div className="form-group checkbox-group">
-                                <input
-                                    type="checkbox"
-                                    id="kitchen"
-                                    name="kitchen"
-                                    checked={calculatorData.kitchen}
-                                    onChange={handleInputChange}
-                                />
-                                <label htmlFor="kitchen">تشطيب مطبخ</label>
-                            </div>
-
-                            <div className="form-group checkbox-group">
-                                <input
-                                    type="checkbox"
-                                    id="balcony"
-                                    name="balcony"
-                                    checked={calculatorData.balcony}
-                                    onChange={handleInputChange}
-                                />
-                                <label htmlFor="balcony">تشطيب بلكونة</label>
-                            </div>
-                        </div>
-
-                        <div className="calculator-result">
-                            <h3>التكلفة التقديرية</h3>
-                            <div className="result-item">
-                                <span className="result-label">التكلفة الأساسية:</span>
-                                <span className="result-value">{formatNumber(calculationResult.basePrice)} جنيه</span>
-                            </div>
-                            <div className="result-item">
-                                <span className="result-label">تكاليف إضافية:</span>
-                                <span className="result-value">{formatNumber(calculationResult.additionalCosts)} جنيه</span>
-                            </div>
-                            <div className="result-item total">
-                                <span className="result-label">التكلفة الإجمالية:</span>
-                                <span className="result-value">{formatNumber(calculationResult.totalPrice)} جنيه</span>
-                            </div>
-                            <p className="result-note">* هذه التكلفة تقديرية وقد تختلف بناءً على متطلبات المشروع والمواد المستخدمة.</p>
-                            <Link to="/contact" className="btn btn-primary">احصل على عرض سعر دقيق</Link>
+                        <div className="form-benefits">
+                            <h3>لماذا تطلب عرض سعر من تشطيب؟</h3>
+                            <ul>
+                                <li>
+                                    <i className="fas fa-check-circle"></i>
+                                    <span>عرض سعر مفصل ودقيق حسب احتياجاتك</span>
+                                </li>
+                                <li>
+                                    <i className="fas fa-check-circle"></i>
+                                    <span>استشارة مجانية من خبرائنا</span>
+                                </li>
+                                <li>
+                                    <i className="fas fa-check-circle"></i>
+                                    <span>ضمان شامل على جميع الأعمال</span>
+                                </li>
+                                <li>
+                                    <i className="fas fa-check-circle"></i>
+                                    <span>خيارات تقسيط مرنة</span>
+                                </li>
+                                <li>
+                                    <i className="fas fa-check-circle"></i>
+                                    <span>فريق عمل محترف وخبرة 15 عام</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

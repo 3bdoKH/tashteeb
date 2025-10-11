@@ -44,7 +44,7 @@ const Footer = () => {
                             <ul className="contact-info">
                                 <li>
                                     <i className="fas fa-map-marker-alt"></i>
-                                    <span>١٤٧ شارع النزهه الدور التاسع</span>
+                                    <span> شارع النزهه</span>
                                 </li>
                                 <li onClick={() => window.location.href = 'tel:01286282884'}>
                                     <i className="fas fa-phone"></i>

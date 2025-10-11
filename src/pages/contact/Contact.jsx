@@ -16,13 +16,6 @@ const Contact = () => {
         message: ''
     });
 
-    // Form status
-    const [formStatus, setFormStatus] = useState({
-        submitted: false,
-        error: false,
-        message: ''
-    });
-
     // Handle form input changes
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -38,22 +31,40 @@ const Contact = () => {
 
         // Simple validation
         if (!formData.name || !formData.phone || !formData.message) {
-            setFormStatus({
-                submitted: true,
-                error: true,
-                message: 'يرجى ملء جميع الحقول المطلوبة'
-            });
+            alert('يرجى ملء جميع الحقول المطلوبة');
             return;
         }
 
-        // Simulate form submission
-        setFormStatus({
-            submitted: true,
-            error: false,
-            message: 'تم إرسال رسالتك بنجاح! سنتواصل معك قريبًا.'
-        });
+        // Get service label
+        const serviceLabel = serviceOptions.find(opt => opt.value === formData.service)?.label || 'غير محدد';
 
-        // Reset form after successful submission
+        // Create WhatsApp message
+        let message = `
+📧 *رسالة تواصل جديدة*
+
+👤 *الاسم:* ${formData.name}
+📱 *رقم الهاتف:* ${formData.phone}`;
+
+        if (formData.email) {
+            message += `\n✉️ *البريد الإلكتروني:* ${formData.email}`;
+        }
+
+        if (formData.service) {
+            message += `\n🔧 *الخدمة المطلوبة:* ${serviceLabel}`;
+        }
+
+        message += `\n\n💬 *الرسالة:*\n${formData.message}`;
+
+        message = message.trim();
+
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappURL = `https://wa.me/+201286282884?text=${encodedMessage}`;
+
+        // Open WhatsApp
+        window.open(whatsappURL, '_blank');
+
+        // Reset form after submission
         setFormData({
             name: '',
             email: '',
@@ -61,22 +72,12 @@ const Contact = () => {
             service: '',
             message: ''
         });
-
-        // Reset form status after 5 seconds
-        setTimeout(() => {
-            setFormStatus({
-                submitted: false,
-                error: false,
-                message: ''
-            });
-        }, 5000);
     };
 
     // Services options
     const serviceOptions = [
         { value: '', label: 'اختر الخدمة' },
         { value: 'full', label: 'تشطيب كامل' },
-        { value: 'partial', label: 'تشطيب نص تشطيب' },
         { value: 'design', label: 'تصميم داخلي' },
         { value: 'renovation', label: 'ترميم وتجديد' },
         { value: 'other', label: 'خدمة أخرى' }
@@ -87,7 +88,7 @@ const Contact = () => {
         {
             id: 1,
             city: 'القاهرة',
-            address: '١٤٧ شارع النزهه الدور التاسع',
+            address: ' شارع النزهه ',
             phone: '01286282884',
             email: 'info@tashteeb.com',
             hours: 'السبت - الخميس: 9 صباحًا - 6 مساءً',
@@ -133,7 +134,7 @@ const Contact = () => {
                                 <i className="fas fa-map-marker-alt"></i>
                             </div>
                             <h3>العنوان</h3>
-                            <p>١٤٧ شارع النزهه الدور التاسع</p>
+                            <p> شارع النزهه </p>
                         </div>
 
                         <div className="contact-card">
@@ -162,13 +163,8 @@ const Contact = () => {
                 <div className="container">
                     <div className="contact-grid">
                         <div className="contact-form-container">
-                            <h2>أرسل لنا رسالة</h2>
-
-                            {formStatus.submitted && (
-                                <div className={`form-message ${formStatus.error ? 'error' : 'success'}`}>
-                                    {formStatus.message}
-                                </div>
-                            )}
+                            <h2>أرسل لنا رسالة عبر الواتساب</h2>
+                            <p className="form-description">املأ النموذج وسيتم فتح الواتساب مباشرة مع رسالتك</p>
 
                             <form className="contact-form" onSubmit={handleSubmit}>
                                 <div className="form-row">
@@ -238,7 +234,10 @@ const Contact = () => {
                                     ></textarea>
                                 </div>
 
-                                <button type="submit" className="btn btn-primary">إرسال الرسالة</button>
+                                <button type="submit" className="btn btn-primary btn-whatsapp-submit">
+                                    <i className="fab fa-whatsapp"></i>
+                                    إرسال عبر الواتساب
+                                </button>
                             </form>
                         </div>
 

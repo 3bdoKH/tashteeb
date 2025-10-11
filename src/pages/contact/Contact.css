@@ -117,9 +117,16 @@
 
 .contact-form-container h2 {
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     color: #333;
     text-align: center;
+}
+
+.contact-form-container .form-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
 }
 
 .form-message {
@@ -198,6 +205,23 @@
     background-color: var(--accent-hover);
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-whatsapp-submit {
+    background-color: #25d366 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-whatsapp-submit:hover {
+    background-color: #20ba5a !important;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3) !important;
+}
+
+.btn-whatsapp-submit i {
+    font-size: 1.3rem;
 }
 
 .contact-whatsapp {

@@ -5,6 +5,7 @@ import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import ThemeNavigator from "./components/themenavigator/ThemeNavigator";
+import FloatingContacts from "./components/floatingcontacts/FloatingContacts";
 
 // Import pages
 import Home from "./pages/Home";
@@ -32,6 +33,7 @@ function App() {
           <Route path="/offers" element={<OffersPage />} />
         </Routes>
         <Footer />
+        <FloatingContacts />
         <ThemeNavigator />
       </div>
     </Router>

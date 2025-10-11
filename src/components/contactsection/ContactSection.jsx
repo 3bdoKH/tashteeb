@@ -76,7 +76,7 @@ const ContactSection = () => {
                                 <i className="fas fa-map-marker-alt"></i>
                             </div>
                             <h3>العنوان</h3>
-                            <p>١٤٧ شارع النزهه الدور التاسع</p>
+                            <p> شارع النزهه </p>
                         </div>
 
                         <div className="contact-card">

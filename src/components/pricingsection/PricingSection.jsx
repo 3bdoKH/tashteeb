@@ -153,9 +153,9 @@ const PricingSection = () => {
                 </div>
 
                 <div className="pricing-cta">
-                    <h3>احسب تكلفة تشطيب شقتك</h3>
-                    <p>استخدم الحاسبة التفاعلية في صفحة الأسعار لتقدير التكلفة بشكل دقيق</p>
-                    <Link to="/pricing" className="btn btn-secondary">حاسبة التكلفة</Link>
+                    <h3>احصل على عرض سعر مخصص</h3>
+                    <p>املأ البيانات وسنرسل لك عرض سعر تفصيلي عبر الواتساب</p>
+                    <Link to="/pricing" className="btn btn-secondary"> اختر الباقة</Link>
                 </div>
             </div>
         </section>

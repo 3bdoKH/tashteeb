@@ -170,112 +170,167 @@
     margin-bottom: 60px;
 }
 
-/* Calculator section */
+/* Calculator section - Now Quote Form */
 .calculator-section {
     padding: 80px 0;
     background-color: #f9f9f9;
 }
 
-.calculator-container {
+.quote-form-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quote-form {
     background-color: #fff;
     border-radius: 10px;
-    overflow: hidden;
+    padding: 40px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.calculator-form {
-    padding: 40px;
-    border-left: 1px solid #eee;
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
 }
 
 .form-group {
-    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
     font-weight: 600;
     color: #333;
+    font-size: 0.95rem;
+}
+
+.form-group label i {
+    color: var(--accent);
+    font-size: 1rem;
 }
 
 .form-group input,
 .form-group select {
     width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 14px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
 }
 
 .form-group input:focus,
 .form-group select:focus {
-    border-color: var(--border);
+    border-color: var(--accent);
     outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
 }
 
-.checkbox-group {
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: left 12px center;
+    background-size: 20px;
+    padding-left: 40px;
+}
+
+.form-submit {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+    background-color: #20ba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp i {
+    font-size: 1.3rem;
+}
+
+.form-note {
+    margin-top: 15px;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.form-benefits {
+    background: linear-gradient(135deg, var(--accent) 0%, #d35400 100%);
+    border-radius: 10px;
+    padding: 35px 30px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(230, 126, 34, 0.2);
+}
+
+.form-benefits h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 15px;
+}
+
+.form-benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form-benefits li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.form-benefits li i {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.checkbox-group input {
-    width: auto;
-    margin-left: 10px;
-}
-
-.checkbox-group label {
-    margin-bottom: 0;
-}
-
-.calculator-result {
-    padding: 40px;
-    background-color: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-}
-
-.calculator-result h3 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-    color: #333;
-    text-align: center;
-}
-
-.result-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.result-item.total {
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 2px solid #ddd;
-    border-bottom: none;
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-
-.result-label {
-    color: #666;
-}
-
-.result-value {
-    color: #333;
-}
-
-.result-note {
-    margin: 20px 0 30px;
-    color: #888;
-    font-size: 0.9rem;
-    text-align: center;
+.form-benefits li span {
+    font-size: 0.95rem;
 }
 
 /* FAQ section */
@@ -359,13 +414,12 @@
 
 /* Responsive styles */
 @media (max-width: 992px) {
-    .calculator-container {
+    .quote-form-container {
         grid-template-columns: 1fr;
     }
 
-    .calculator-form {
-        border-left: none;
-        border-bottom: 1px solid #eee;
+    .form-grid {
+        grid-template-columns: 1fr;
     }
 
     .faq-list {
@@ -386,9 +440,17 @@
         transform: scale(1);
     }
 
-    .calculator-form,
-    .calculator-result {
+    .quote-form {
         padding: 30px 20px;
+    }
+
+    .form-benefits {
+        padding: 25px 20px;
+    }
+
+    .btn-whatsapp {
+        width: 100%;
+        justify-content: center;
     }
 
     .pricing-cta {
