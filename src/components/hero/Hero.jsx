@@ -49,7 +49,7 @@ const Hero = () => {
                 <p>نحول مساحتك إلى منزل أحلامك مع خبرة أكثر من 15 عامًا في مجال التشطيبات الداخلية</p>
                 <div className="hero-buttons">
                     <Link to="/services" className="btn btn-primary">اعرف أكثر</Link>
-                    <Link to="/pricing" className="btn btn-secondary">شوف الأسعار</Link>
+                    <Link to="/pricing" className="btn btn-secondary">اعرض الأسعار</Link>
                 </div>
             </div>
 
@@ -58,7 +58,7 @@ const Hero = () => {
                 <span></span>
                 <span></span>
             </div>
-        </section>
+        </section >
     );
 };
 

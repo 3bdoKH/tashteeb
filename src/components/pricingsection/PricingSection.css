@@ -177,15 +177,15 @@
 }
 
 .btn-secondary:hover {
-    background-color: transparent;
-    color: #333;
+    background-color: var(--accent-hover);
+    color: white;
 }
 
 @media (max-width: 992px) {
     .pricing-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
-    
+
     .pricing-card.recommended {
         transform: scale(1);
     }
@@ -195,7 +195,7 @@
     .pricing-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .pricing-cta {
         padding: 30px;
     }

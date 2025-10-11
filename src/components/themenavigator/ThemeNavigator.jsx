@@ -27,13 +27,13 @@ const ThemeNavigator = () => {
       }
     },
     {
-      name: 'green',
-      label: 'Green',
+      name: 'orange',
+      label: 'Orange',
       colors: {
-        accent: '#28a745',
-        accentHover: '#218838',
-        border: '#5cb85c',
-        text: '#20c997'
+        accent: '#e67e22',
+        accentHover: '#d35400',
+        border: '#f39c12',
+        text: '#e67e22'
       }
     },
     {
@@ -62,7 +62,7 @@ const ThemeNavigator = () => {
       root.style.setProperty('--accent-hover', theme.colors.accentHover);
       root.style.setProperty('--border', theme.colors.border);
       root.style.setProperty('--text', theme.colors.text);
-      
+
       setCurrentTheme(themeName);
       localStorage.setItem('theme', themeName);
     }
@@ -75,18 +75,18 @@ const ThemeNavigator = () => {
 
   return (
     <div className="theme-navigator">
-      <button 
+      <button
         className="theme-toggle-btn"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle theme menu"
         title="Change Theme"
       >
-        <svg 
-          width="24" 
-          height="24" 
-          viewBox="0 0 24 24" 
-          fill="none" 
-          stroke="currentColor" 
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
           strokeWidth="2"
         >
           <circle cx="12" cy="12" r="5"></circle>
@@ -105,7 +105,7 @@ const ThemeNavigator = () => {
                 onClick={() => handleThemeChange(theme.name)}
                 aria-label={`Switch to ${theme.label} theme`}
               >
-                <div 
+                <div
                   className="theme-color-preview"
                   style={{ backgroundColor: theme.colors.accent }}
                 ></div>
@@ -120,8 +120,8 @@ const ThemeNavigator = () => {
       )}
 
       {isOpen && (
-        <div 
-          className="theme-overlay" 
+        <div
+          className="theme-overlay"
           onClick={() => setIsOpen(false)}
         ></div>
       )}
