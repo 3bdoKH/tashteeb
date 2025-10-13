@@ -134,7 +134,7 @@ const Contact = () => {
                                 <i className="fas fa-map-marker-alt"></i>
                             </div>
                             <h3>العنوان</h3>
-                            <p> شارع النزهه </p>
+                            <p>ميدان تريمف بجوار كنيسة العذراء سانت فاتيما</p>
                         </div>
 
                         <div className="contact-card">
@@ -152,7 +152,7 @@ const Contact = () => {
                             <i className="fab fa-facebook-f"></i>
                         </a>
 
-                        <a href="https://wa.me/+201286282884" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/+2001126351365" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -244,7 +244,7 @@ const Contact = () => {
                         <div className="contact-whatsapp">
                             <h2>تواصل معنا عبر الواتساب</h2>
                             <p>للتواصل السريع والاستفسارات العاجلة، يمكنك التواصل معنا مباشرة عبر الواتساب</p>
-                            <a href="https://wa.me/+201286282884" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
+                            <a href="https://wa.me/+201126351365" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
                                 <i className="fab fa-whatsapp"></i> تواصل عبر الواتساب
                             </a>
 

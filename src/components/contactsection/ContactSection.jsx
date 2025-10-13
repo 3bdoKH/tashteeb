@@ -76,7 +76,7 @@ const ContactSection = () => {
                                 <i className="fas fa-map-marker-alt"></i>
                             </div>
                             <h3>العنوان</h3>
-                            <p> شارع النزهه </p>
+                            <p> ميدان تريمف بجوار كنيسة العذراء سانت فاتيما</p>
                         </div>
 
                         <div className="contact-card">

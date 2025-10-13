@@ -44,11 +44,11 @@ const Footer = () => {
                             <ul className="contact-info">
                                 <li>
                                     <i className="fas fa-map-marker-alt"></i>
-                                    <span> شارع النزهه</span>
+                                    <span>ميدان تريمف بجوار كنيسة العذراء سانت فاتيما</span>
                                 </li>
                                 <li onClick={() => window.location.href = 'tel:01286282884'}>
                                     <i className="fas fa-phone"></i>
-                                    <span>01286282884</span>
+                                    <span>01126351365</span>
                                 </li>
                                 <li>
                                     <i className="fas fa-envelope"></i>
