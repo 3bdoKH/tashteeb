@@ -88,13 +88,14 @@ const Contact = () => {
         {
             id: 1,
             city: 'القاهرة',
-            address: ' شارع النزهه ',
+            address: 'ميدان تريمف بجوار كنيسة العذراء سانت فاتيما',
             phone: '01286282884',
             email: 'info@tashteeb.com',
             hours: 'السبت - الخميس: 9 صباحًا - 6 مساءً',
-            mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.6763430733726!2d46.67221251499919!3d24.700772184127007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sKing%20Fahd%20Rd%2C%20Riyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1635159444010!5m2!1sen!2sus'
+            mapUrl: 'https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3451.5765511235877!2d31.341871785602894!3d30.106311485569357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zINmF2YrYr9in2YYg2KrYsdmK2YXZgSDYqNis2YjYp9ixINmD2YbZitiz2Kkg2KfZhNi52LDYsdin2KEg2LPYp9mG2Kog2YHYp9iq2YrZhdin!5e0!3m2!1sen!2seg!4v1761058175593!5m2!1sen!2seg'
         },
     ];
+
 
     // Active office for map display
     const [activeOffice, setActiveOffice] = useState(offices[0]);
@@ -279,17 +280,7 @@ const Contact = () => {
                             ))}
                         </div>
 
-                        <div className="office-map">
-                            <iframe
-                                src={activeOffice.mapUrl}
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen=""
-                                loading="lazy"
-                                title={`موقع ${activeOffice.city}`}
-                            ></iframe>
-                        </div>
+
                     </div>
                 </div>
             </section>

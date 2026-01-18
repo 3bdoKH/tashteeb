@@ -130,6 +130,26 @@
 .copyright p {
     color: #888;
     font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.copyright span {
+    display: inline-block;
+}
+
+.copyright a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.copyright a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
 }
 
 .social-links {

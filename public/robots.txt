@@ -1,3 +1,46 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt for Tashteeb Website
+# This file controls how search engines crawl your site
+
+# Allow all web crawlers to access all content
 User-agent: *
-Disallow:
+Allow: /
+
+# Block access to sensitive directories
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /*.json$
+Disallow: /*.map$
+Disallow: /src/
+
+# Allow access to static assets
+Allow: /static/
+Allow: /images/
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.webp
+Allow: *.svg
+Allow: *.ico
+
+# Block common non-content files
+Disallow: *.pdf$
+Disallow: *.doc$
+Disallow: *.docx$
+Disallow: *.xls$
+Disallow: *.xlsx$
+
+# Crawl delay (in seconds) - optional, be conservative
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://tashteeb-beltaqseet.com/sitemap.xml
+
+# Additional sitemaps if you have them
+# Sitemap: https://yourdomain.com/image-sitemap.xml
+# Sitemap: https://yourdomain.com/news-sitemap.xml

@@ -10,6 +10,7 @@ import PricingSection from '../components/pricingsection/PricingSection';
 import Testimonials from '../components/testimonials/Testimonials';
 import ContactSection from '../components/contactsection/ContactSection';
 import SpecialOffers from '../components/specialoffers/SpecialOffers';
+import RelatedKeywords from '../components/relatedkeywords/RelatedKeywords';
 
 const Home = () => {
     // Scroll to top on page load
@@ -27,6 +28,7 @@ const Home = () => {
             <ProjectPreview />
             <Testimonials />
             <ContactSection />
+            <RelatedKeywords />
         </div>
     );
 };
