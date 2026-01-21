@@ -59,7 +59,7 @@ const Contact = () => {
 
         // Encode message for URL
         const encodedMessage = encodeURIComponent(message);
-        const whatsappURL = `https://wa.me/+201286282884?text=${encodedMessage}`;
+        const whatsappURL = `https://wa.me/+201008641756?text=${encodedMessage}`;
 
         // Open WhatsApp
         window.open(whatsappURL, '_blank');
@@ -89,7 +89,7 @@ const Contact = () => {
             id: 1,
             city: 'القاهرة',
             address: 'ميدان تريمف بجوار كنيسة العذراء سانت فاتيما',
-            phone: '01286282884',
+            phone: '01008641756',
             email: 'info@tashteeb.com',
             hours: 'السبت - الخميس: 9 صباحًا - 6 مساءً',
             mapUrl: 'https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3451.5765511235877!2d31.341871785602894!3d30.106311485569357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zINmF2YrYr9in2YYg2KrYsdmK2YXZgSDYqNis2YjYp9ixINmD2YbZitiz2Kkg2KfZhNi52LDYsdin2KEg2LPYp9mG2Kog2YHYp9iq2YrZhdin!5e0!3m2!1sen!2seg!4v1761058175593!5m2!1sen!2seg'
@@ -117,7 +117,7 @@ const Contact = () => {
                                 <i className="fas fa-phone-alt"></i>
                             </div>
                             <h3>اتصل بنا</h3>
-                            <p>01286282884</p>
+                            <p>01008641756</p>
                             <p>01126351365</p>
                         </div>
 
@@ -153,7 +153,7 @@ const Contact = () => {
                             <i className="fab fa-facebook-f"></i>
                         </a>
 
-                        <a href="https://wa.me/+201286282884" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/+201008641756" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -245,7 +245,7 @@ const Contact = () => {
                         <div className="contact-whatsapp">
                             <h2>تواصل معنا عبر الواتساب</h2>
                             <p>للتواصل السريع والاستفسارات العاجلة، يمكنك التواصل معنا مباشرة عبر الواتساب</p>
-                            <a href="https://wa.me/+201286282884" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
+                            <a href="https://wa.me/+201008641756" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
                                 <i className="fab fa-whatsapp"></i> تواصل عبر الواتساب
                             </a>
 

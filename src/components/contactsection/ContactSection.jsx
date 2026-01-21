@@ -84,7 +84,7 @@ const ContactSection = () => {
                                 <i className="fas fa-phone-alt"></i>
                             </div>
                             <h3>اتصل بنا</h3>
-                            <p>01286282884</p>
+                            <p>01008641756</p>
                             <p>01126351365</p>
                         </div>
 
@@ -110,7 +110,7 @@ const ContactSection = () => {
                             <a href="https://www.facebook.com/share/172axqTggG/" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://wa.me/+201286282884" target="_blank" rel="noopener noreferrer">
+                            <a href="https://wa.me/+201008641756" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-whatsapp"></i>
                             </a>
                         </div>
@@ -178,7 +178,7 @@ const ContactSection = () => {
 
                         <div className="whatsapp-cta">
                             <p>للتواصل السريع عبر الواتساب</p>
-                            <a href="https://wa.me/+201286282884" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
+                            <a href="https://wa.me/+201008641756" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
                                 <i className="fab fa-whatsapp"></i> تواصل عبر الواتساب
                             </a>
                         </div>

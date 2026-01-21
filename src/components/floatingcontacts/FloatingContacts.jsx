@@ -2,7 +2,7 @@ import React from 'react';
 import './FloatingContacts.css';
 
 const FloatingContacts = () => {
-    const whatsappNumber = '+201286282884';
+    const whatsappNumber = '+201008641756';
     const phoneNumber = '01126351365';
 
     const handleWhatsAppClick = () => {
