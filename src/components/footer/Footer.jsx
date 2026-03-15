@@ -46,9 +46,9 @@ const Footer = () => {
                                     <i className="fas fa-map-marker-alt"></i>
                                     <span>ميدان تريمف بجوار كنيسة العذراء سانت فاتيما</span>
                                 </li>
-                                <li onClick={() => window.location.href = 'tel:01055556363'}>
+                                <li onClick={() => window.location.href = 'tel:01111505503'}>
                                     <i className="fas fa-phone"></i>
-                                    <span>01126351365</span>
+                                    <span>01111505503</span>
                                 </li>
                                 <li>
                                     <i className="fas fa-envelope"></i>
@@ -73,7 +73,7 @@ const Footer = () => {
                             <i className="fab fa-facebook-f"></i>
                         </a>
 
-                        <a href="https://wa.me/+201055556363" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/+201111505503" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-whatsapp"></i>
                         </a>
                     </div>

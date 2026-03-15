@@ -139,7 +139,7 @@ const Pricing = () => {
 
         // Encode message for URL
         const encodedMessage = encodeURIComponent(message);
-        const whatsappURL = `https://wa.me/+201055556363?text=${encodedMessage}`;
+        const whatsappURL = `https://wa.me/+201111505503?text=${encodedMessage}`;
 
         // Open WhatsApp
         window.open(whatsappURL, '_blank');
