@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './SpecialOffers.css';
-
+import { phoneNumbers, whatsappNumbers } from '../../utils/phoneNumbers'
 const SpecialOffers = () => {
     const [activeOffer, setActiveOffer] = useState(0);
 
@@ -9,7 +9,7 @@ const SpecialOffers = () => {
         {
             id: 1,
             title: "🏡 ابني بيتك أو شطب وحدتك",
-            subtitle: "مقدم يبدأ من 20% فقط وباقي المبلغ على 36 شهر بدون فوائد ✨",
+            subtitle: "مقدم يبدأ من 25% فقط وباقي المبلغ على 36 شهر بدون فوائد ✨",
             details: [
                 {
                     title: "💰 نظام السداد:",
@@ -44,7 +44,7 @@ const SpecialOffers = () => {
         {
             id: 2,
             title: "🎯 عرض خاص على تشطيب الشقق",
-            subtitle: "مقدم 20% فقط والباقي بالتقسيط على 36 شهر بدون فوائد",
+            subtitle: "مقدم 25% فقط والباقي بالتقسيط على 36 شهر بدون فوائد",
             details: [
                 {
                     title: "✅ أسعار الباقات:",
@@ -58,8 +58,8 @@ const SpecialOffers = () => {
                 {
                     title: "📌 أنظمة السداد:",
                     items: [
-                        "استلام خلال 6 شهور: 20% مقدم + 10% بعد شهرين + الباقي على 36 شهر.",
-                        "استلام خلال 4 شهور: 20% مقدم + 20% بعد شهرين + الباقي على 36 شهر."
+                        "استلام خلال 6 شهور: 25% مقدم + 10% بعد شهرين + الباقي على 36 شهر.",
+                        "استلام خلال 4 شهور: 25% مقدم + 20% بعد شهرين + الباقي على 36 شهر."
                     ]
                 },
                 {
@@ -72,7 +72,7 @@ const SpecialOffers = () => {
                     ]
                 }
             ],
-            contact: "📞 للحجز والاستفسار: واتساب – 01126351365 / 01055556363"
+            contact: `📞 للحجز والاستفسار: واتساب – ${whatsappNumbers[0]} / ${phoneNumbers[0]}`
         }
     ];
 

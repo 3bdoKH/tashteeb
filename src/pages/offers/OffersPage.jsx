@@ -28,7 +28,7 @@ const OffersPage = () => {
                     <div className="offers-features">
                         <div className="feature">
                             <i className="fas fa-percentage"></i>
-                            <h3>مقدم يبدأ من 20%</h3>
+                            <h3>مقدم يبدأ من 25%</h3>
                         </div>
                         <div className="feature">
                             <i className="fas fa-calendar-alt"></i>
