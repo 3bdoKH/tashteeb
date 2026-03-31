@@ -41,7 +41,7 @@ const Hero = () => {
             <div className="hero-content">
                 <h1>تشطيب بالتقسيط بدون فوائد
                     <br />
-                    36 شهر
+                    30 شهر
                     <br />
                     سعر المتر 1999 جنيه
                     <br />
