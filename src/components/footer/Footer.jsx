@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 import logo from '../../loog.png';
+import { phoneNumbers, whatsappNumbers } from '../../utils/phoneNumbers';
 const Footer = () => {
     return (
         <footer className="footer">
@@ -46,9 +47,9 @@ const Footer = () => {
                                     <i className="fas fa-map-marker-alt"></i>
                                     <span>ميدان تريمف بجوار كنيسة العذراء سانت فاتيما</span>
                                 </li>
-                                <li onClick={() => window.location.href = 'tel:01111505503'}>
+                                <li onClick={() => window.location.href = `tel:${phoneNumbers[0]}`}>
                                     <i className="fas fa-phone"></i>
-                                    <span>01111505503</span>
+                                    <span>{phoneNumbers[0]}</span>
                                 </li>
                                 <li>
                                     <i className="fas fa-envelope"></i>
@@ -73,7 +74,7 @@ const Footer = () => {
                             <i className="fab fa-facebook-f"></i>
                         </a>
 
-                        <a href="https://wa.me/+201111505503" target="_blank" rel="noopener noreferrer">
+                        <a href={`https://wa.me/${whatsappNumbers[0]}`} target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-whatsapp"></i>
                         </a>
                     </div>

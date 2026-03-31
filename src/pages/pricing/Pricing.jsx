@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Pricing.css';
+import { whatsappNumbers } from '../../utils/phoneNumbers';
 
 const Pricing = () => {
     // Scroll to top on page load
@@ -139,7 +140,7 @@ const Pricing = () => {
 
         // Encode message for URL
         const encodedMessage = encodeURIComponent(message);
-        const whatsappURL = `https://wa.me/+201111505503?text=${encodedMessage}`;
+        const whatsappURL = `https://wa.me/${whatsappNumbers[0]}?text=${encodedMessage}`;
 
         // Open WhatsApp
         window.open(whatsappURL, '_blank');

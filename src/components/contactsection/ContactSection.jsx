@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ContactSection.css';
-
+import { phoneNumbers, whatsappNumbers } from '../../utils/phoneNumbers';
 const ContactSection = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -84,8 +84,8 @@ const ContactSection = () => {
                                 <i className="fas fa-phone-alt"></i>
                             </div>
                             <h3>اتصل بنا</h3>
-                            <p>01111505503</p>
-                            <p>01111505503</p>
+                            <p>{phoneNumbers[0]}</p>
+                            <p>{whatsappNumbers[0]}</p>
                         </div>
 
                         <div className="contact-card">
@@ -110,7 +110,7 @@ const ContactSection = () => {
                             <a href="https://www.facebook.com/share/172axqTggG/" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://wa.me/+201111505503" target="_blank" rel="noopener noreferrer">
+                            <a href={`https://wa.me/${whatsappNumbers[0]}`} target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-whatsapp"></i>
                             </a>
                         </div>
@@ -178,7 +178,7 @@ const ContactSection = () => {
 
                         <div className="whatsapp-cta">
                             <p>للتواصل السريع عبر الواتساب</p>
-                            <a href="https://wa.me/+201111505503" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
+                            <a href={`https://wa.me/${whatsappNumbers[0]}`} target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
                                 <i className="fab fa-whatsapp"></i> تواصل عبر الواتساب
                             </a>
                         </div>

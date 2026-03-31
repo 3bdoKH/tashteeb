@@ -1,9 +1,9 @@
 import React from 'react';
 import './FloatingContacts.css';
-
+import { phoneNumbers, whatsappNumbers } from '../../utils/phoneNumbers';
 const FloatingContacts = () => {
-    const whatsappNumber = '+2001111505503';
-    const phoneNumber = '01111505503';
+    const whatsappNumber = whatsappNumbers[0];
+    const phoneNumber = phoneNumbers[0];
 
     const handleWhatsAppClick = () => {
         window.open(`https://wa.me/${whatsappNumber}`, '_blank');
