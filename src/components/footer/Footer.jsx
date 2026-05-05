@@ -66,7 +66,7 @@ const Footer = () => {
 
                 <div className="footer-bottom">
                     <div className="copyright">
-                        <p><span>جميع الحقوق محفوظة &copy; 2025</span> <a href="https://emereld-marketing.online" target="_blank" rel="noopener noreferrer">Adam's Agency</a></p>
+                        <p><span>جميع الحقوق محفوظة &copy; 2025</span> <a href="https://adams-agency.online" target="_blank" rel="noopener noreferrer">Adam's Agency</a></p>
                     </div>
 
                     <div className="social-links">
